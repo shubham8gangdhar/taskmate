@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Home</title>
+{% endblock title %}
+{% block content %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col col-lg-4">
+            <img src= "{% static 'images/notes.jpg' %}" width="360" height="250">
+            </div>
+            <div class="col col-lg-4">
+            <img src= "{% static 'images/notes.jpg' %}" width="360" height="250">
+            </div>
+            <div class="col col-lg-4">
+            <img src= "{% static 'images/notes.jpg' %}" width="360" height="250">
+            </div>
+        </div>
+        <div class="row col-md-10 offset-md-1 mt-3">
+            <center><p><h1>Quick and Easy To Use,Anytime,Anywhere</h1></p><center>
+            <center><p><h3>"Plan Your Day Better,Get Your Life Organized"</h3></p><center>
+            <center><p>TASKMATE Let You Keep Track Of All Your Tasks</p><center>
+            <a href="{% url 'todolist' %}"><button type="button" class="btn btn-secondary btn-lg">Lets Get Started</button></a>
+        </div>
+{% endblock content %}
+
