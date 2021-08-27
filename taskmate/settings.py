@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 import os
 import environ
+import django_heroku
 env=environ.Env(SECRET_KEY = str,)
 environ.Env.read_env(os.path.join(BASE_DIR , '.env')) 
 SECRET_KEY = env('DJANGO_SECRET_KEY')
@@ -137,3 +138,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK= 'bootstrap4'
 LOGIN_REDIRECT_URL='todolist'
 LOGIN_URL='login'
+django_heroku.settings(locals())
